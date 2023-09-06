@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <style></style>
+  </head>
+  <body
+    class="d-flex align-items-center justify-content-center"
+    style="width: 100%; height: 100vh"
+  >
+    <div class="songs-played row justify-content-center">
+      <audio controls id="song" autoplay class="d-none">
+        <source id="audioSource" src="" type="audio/mpeg" />
+      </audio>
+      <div class="card col-8 col-lg-5 p-0">
+        <img class="card-img-top" src="./imgs/img3.jpg" alt="" id="sImg" />
+        <h4 class="ps-2 text-center" id="sname">sogn name</h4>
+        <div class="icons d-flex justify-content-evenly p-3 fs-3">
+          <div
+            class="back bg-primary rounded-3 p-1 d-flex align-items-center justify-content-center text-light"
+            id="back"
+          >
+            <ion-icon name="play-back-circle-outline"></ion-icon>
+          </div>
+          <div
+            class="play bg-success rounded-3 p-1 d-flex align-items-center justify-content-center text-light"
+            id="play"
+          >
+            <ion-icon name="play-outline"></ion-icon>
+          </div>
+          <div
+            class="forward bg-primary rounded-3 p-1 d-flex align-items-center justify-content-center text-light"
+            id="forward"
+          >
+            <ion-icon name="play-forward-circle-outline"></ion-icon>
+          </div>
+        </div>
+        <input type="range" class="m-3" id="volume" min="0" max="1" step=".1" />
+      </div>
+    </div>
+    <script src="./master.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./bootstrap.bundle.js"></script>
+  </body>
+</html>

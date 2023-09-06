@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../bootstrap lap2 السيد راضي السيد/bootstrap.min.css"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      class="content d-flex align-items-center justify-content-center"
+      style="width: 100%; height: 100vh"
+    >
+      <div class="row w-100">
+        <h2 class="text-capitalize text-center fw-light mb-5">
+          reservation form
+        </h2>
+        <form action="" class="m-auto col-12 col-md-5">
+          <article class="row mb-3">
+            <label for="" class="text-capitalize col-3 col-form-label"
+              >name <span class="text-danger">*</span></label
+            >
+            <div class="col-9">
+              <input
+                type="text"
+                placeholder="name"
+                name="name"
+                class="form-control border-0 bg-body-secondary bg-black text-capitalize"
+                required
+                min="5"
+                max="35"
+                autocomplete="name"
+              />
+            </div>
+          </article>
+          <article class="row mb-3">
+            <label for="" class="col-form-label text-capitalize col-3"
+              >email <span class="text-danger">*</span></label
+            >
+            <div class="col-9">
+              <input
+                type="email"
+                placeholder="email"
+                name="email"
+                class="form-control border-0 bg-body-secondary bg-black text-capitalize"
+                required
+                min="5"
+                max="35"
+                autocomplete="email"
+              />
+            </div>
+          </article>
+          <article class="row justify-content-center mb-3">
+            <label for="" class="col-form-label text-capitalize col-3"
+              >room type <span class="text-danger">*</span></label
+            >
+            <div class="col-9">
+              <input
+                type="text"
+                list="rooms"
+                placeholder="room type"
+                name="roomNum"
+                class="form-control border-0 bg-body-secondary text-capitalize"
+                required
+                min="6"
+                max="20"
+              />
+            </div>
+            <datalist id="rooms">
+              <option value="single">single</option>
+              <option value="duplex">duplex</option>
+              <option value="3 person">3 person</option>
+              <option value="4 person">4 person</option>
+            </datalist>
+          </article>
+          <article class="row justify-content-center mb-3">
+            <label for="" class="col-form-label text-capitalize col-3"
+              >arrival date <span class="text-danger">*</span></label
+            >
+            <div class="col-9">
+              <input
+                type="datetime-local"
+                placeholder="arrival date"
+                name="date"
+                class="form-control border-0 bg-body-secondary text-capitalize"
+              />
+            </div>
+          </article>
+          <article class="row justify-content-center mb-3">
+            <label for="" class="col-form-label text-capitalize col-3"
+              >departion date <span class="text-danger">*</span></label
+            >
+            <div class="col-9">
+              <input
+                type="datetime-local"
+                placeholder="arrival date"
+                name="date"
+                class="form-control border-0 bg-body-secondary text-capitalize"
+              />
+            </div>
+          </article>
+          <article class="row justify-content-center mb-3">
+            <label for="" class="col-form-label text-capitalize col-3"
+              >number of guests</label
+            >
+            <div class="col-9">
+              <input
+                type="number"
+                placeholder="number of guests"
+                name="name"
+                class="form-control border-0 bg-body-secondary text-capitalize"
+                autocomplete="cc-number"
+                min="1"
+                max="15"
+              />
+            </div>
+          </article>
+          <article class="row justify-content-center mb-3">
+            <label for="" class="form-label text-capitalize col-3"
+              >free pickup
+            </label>
+            <div class="radio col-9 d-flex gap-2">
+              <input
+                id="2"
+                type="radio"
+                value="yes"
+                class="form-check-input"
+                name="freepickup"
+              /><label for="2" class="form-check-label text-capitalize"
+                >yes</label
+              >
+              <input
+                type="radio"
+                value="no"
+                name="freepickup"
+                class="form-check-input"
+                id="1"
+              /><label for="1" class="form-check-label text-capitalize"
+                >no</label
+              >
+            </div>
+          </article>
+          <article class="row justify-content-center mb-3">
+            <label for="" class="col-form-label text-capitalize col-3"
+              >flight number</label
+            >
+            <div class="col-9">
+              <input
+                type="number"
+                placeholder="flight number"
+                name="fnumber"
+                min="5"
+                max="13"
+                class="form-control border-0 bg-body-secondary text-capitalize"
+              />
+            </div>
+          </article>
+          <article class="row justify-content-center mb-3">
+            <label for="" class="col-form-label text-capitalize col-3"
+              >social requests</label
+            >
+            <div class="col-9">
+              <textarea
+                cols=""
+                rows="3"
+                placeholder="type here"
+                name="fnumber"
+                min="5"
+                max="50"
+                class="form-control border-0 bg-body-secondary text-capitalize"
+              ></textarea>
+            </div>
+          </article>
+          <article class="row mb-3 me-1">
+            <div class="pos col-9 d-flex flex-column">
+              <span class="">latitude: <span id="lat" class=""></span></span>
+              <span>longitude: <span id="long"></span></span>
+            </div>
+            <button
+              id="getLocation"
+              class="text-light btn btn-info col-3"
+              type="button
+            "
+            >
+              location
+            </button>
+          </article>
+          <button type="button" class="btn btn-primary w-100">submit</button>
+        </form>
+      </div>
+    </section>
+    <script src="../السيد راضي السيد عبدالحميد bootstrap assignment -2/bootstrap.bundle.js"></script>
+    <script src="./master.js"></script>
+  </body>
+</html>

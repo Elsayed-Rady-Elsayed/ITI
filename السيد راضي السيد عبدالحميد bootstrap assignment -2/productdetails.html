@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">E-commerce</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-capitalize w-100">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">about us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact us</a>
+            </li>
+            <li class="nav-item ms-lg-auto text-capitalize d-flex gap-2">
+              <a href="" class="btn btn-outline-dark">login</a>
+              <a href="" class="btn btn-dark text-light">register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="modal" id="exampleModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">are you sure?</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="content row">
+              <div class="col-2">
+                <img
+                  src="https://www.w3schools.com/w3images/jeans3.jpg"
+                  class="img-thumbnail"
+                  alt=""
+                />
+              </div>
+              <div class="col-10">
+                <div class="row">
+                  <div class="col-10">
+                    <h2>jeans</h2>
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Pariatur blanditiis eius eveniet aliquid optio
+                      necessitatibus soluta harum, quae suscipit atque neque! Ex
+                      eos quis nemo. Culpa consequuntur nihil tempora corporis?
+                    </p>
+                  </div>
+                  <div class="col-2">$12</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="productDetails border border-1 row">
+      <img
+        class="col-4 col-lg-2"
+        src="https://www.w3schools.com/w3images/jeans3.jpg"
+        alt=""
+      />
+      <div class="details col-8 col-lg-10">
+        <div class="row h-50">
+          <h2 class="">jeans</h2>
+          <p class="desc">
+            Lorem aboriosam magnam ut alias impedit dolore voluptate officiis
+            deleniti, tempora ipsa neque veniam eius, dignissimos aspernatur
+            ipsum distinctio?
+          </p>
+        </div>
+        <div class="row w-100 h-50 mt-3">
+          <div class="transaction col-12 d-flex flex-column align-items-end">
+            <p class="fw-bold">$21</p>
+            <div class="btn-group">
+              <div
+                class="btn btn-info me-2 rounded-0"
+                id="addToCart"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                add to cart
+              </div>
+              <div class="btn btn-outline-success rounded-0">check out</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="nav nav-tabs my-5 mx-3">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">jeans</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">jeans</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">jacket</a>
+      </li>
+    </ul>
+    <div class="similarP w-100">
+      <h3>similart products</h3>
+      <div class="cards row">
+        <div class="card border-0 p-2 col-sm-2 col-lg-3">
+          <p class="text-center">jeans</p>
+          <img
+            class="mw-100"
+            src="https://www.w3schools.com/w3images/jeans3.jpg"
+            alt=""
+          />
+          <button class="btn m-2 btn-info text-capitalize rounded-0">
+            view details
+          </button>
+        </div>
+        <div class="card border-0 p-2 col-sm-2 col-lg-3">
+          <p class="text-center">jeans</p>
+          <img
+            class="mw-100"
+            src="https://www.w3schools.com/w3images/jeans3.jpg"
+            alt=""
+          />
+          <button class="btn m-2 btn-info text-capitalize rounded-0">
+            view details
+          </button>
+        </div>
+        <div class="card border-0 p-2 col-sm-2 col-lg-3">
+          <p class="text-center">jeans</p>
+          <img
+            class="mw-100"
+            src="https://www.w3schools.com/w3images/jeans3.jpg"
+            alt=""
+          />
+          <button class="btn m-2 btn-info text-capitalize rounded-0">
+            view details
+          </button>
+        </div>
+        <div class="card border-0 p-2 col-sm-2 col-lg-3">
+          <p class="text-center">jeans</p>
+          <img
+            class="mw-100"
+            src="https://www.w3schools.com/w3images/jeans3.jpg"
+            alt=""
+          />
+          <button class="btn m-2 btn-info text-capitalize rounded-0">
+            view details
+          </button>
+        </div>
+        <div class="card border-0 p-2 col-sm-2 col-lg-3">
+          <p class="text-center">jeans</p>
+          <img
+            class="mw-100"
+            src="https://www.w3schools.com/w3images/jeans3.jpg"
+            alt=""
+          />
+          <button class="btn m-2 btn-info text-capitalize rounded-0">
+            view details
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="./bootstrap.bundle.js"></script>
+    <script>
+      document.getElementById("addToCart").onclick = function () {};
+    </script>
+  </body>
+</html>

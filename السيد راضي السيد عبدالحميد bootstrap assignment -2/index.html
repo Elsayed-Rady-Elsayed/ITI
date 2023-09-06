@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      img {
+        filter: grayscale(1);
+      }
+    </style>
+  </head>
+  <body class="">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">E-commerce</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-capitalize w-100">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">about us</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">contact us</a>
+            </li>
+            <li class="nav-item ms-lg-auto text-capitalize d-flex gap-2">
+              <a href="" class="btn btn-outline-dark">login</a>
+              <a href="" class="btn btn-dark text-light">register</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="sidebar py-5 col-md-2 d-none d-md-block" id="sidebar">
+          <div class="logo fs-5 fw-normal d-none d-md-block">LOGO</div>
+          <ul class="list-unstyled mt-2 fw-bold">
+            <li class="">
+              <a
+                href=""
+                class="text-decoration-none text-black-50 text-capitalize"
+                >Shirts</a
+              >
+            </li>
+            <li class="mt-2">
+              <a
+                href=""
+                class="text-decoration-none text-black-50 text-capitalize"
+                >dresses</a
+              >
+            </li>
+            <li class="mt-2">
+              <a
+                href=""
+                class="text-decoration-none text-black-50 text-capitalize"
+                >jeans</a
+              >
+            </li>
+            <li class="mt-2">
+              <a
+                href=""
+                class="text-decoration-none text-black-50 text-capitalize"
+                >jackets</a
+              >
+            </li>
+            <li class="mt-2">
+              <a
+                href=""
+                class="text-decoration-none text-black-50 text-capitalize"
+                >gymwear</a
+              >
+            </li>
+            <li class="mt-2">
+              <a
+                href=""
+                class="text-decoration-none text-black-50 text-capitalize"
+                >blazers</a
+              >
+            </li>
+            <li class="mt-2">
+              <a
+                href=""
+                class="text-decoration-none text-black-50 text-capitalize"
+                >shoes</a
+              >
+            </li>
+          </ul>
+          <ul class="services list-unstyled mt-5">
+            <li class="mt-2">
+              <a href="" class="text-decoration-none text-black text-capitalize"
+                >contact</a
+              >
+            </li>
+            <li class="mt-2">
+              <a href="" class="text-decoration-none text-black text-capitalize"
+                >newletter</a
+              >
+            </li>
+            <li class="mt-2">
+              <a href="" class="text-decoration-none text-black text-capitalize"
+                >subscribe</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div
+          class="col-12 col-md-10 py-5 d-flex flex-column justify-content-start"
+        >
+          <div
+            class="header fw-semibold text-capitalize d-flex justify-content-between"
+          >
+            <p>jeans</p>
+            <div class="icons gap-2 d-flex">
+              <ion-icon name="cart-outline"></ion-icon
+              ><ion-icon name="search-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="land w-100 h-100 position-relative">
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="0"
+                  class="active"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to="2"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://imgs.search.brave.com/B08QzjiwxzLx3YwZtxM3lcADaXxgGvfohYF1sTIWj6g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by9m/YXNoaW9uLXBob3Rv/LWdyYWNlZnVsLWJy/dW5ldHRlLXdvbWFu/LXNwcmluZy1vdXRm/aXQtcG9zaW5nLWhv/bGRpbmctd2hpdGUt/YmFnXzI3MzQ0My00/MTI0LmpwZz9zaXpl/PTYyNiZleHQ9anBn"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://imgs.search.brave.com/aiQumRhOoGlrtl38DDSuBlrUEVxupTdzXIC_T-sBz40/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pc29y/ZXB1YmxpYy5jb20v/d3AtY29udGVudC91/cGxvYWRzLzIwMjIv/MDYvaXNvLXJlcHVi/bGljLW1lcmVkaXRo/LTQ1LTQ1MHgzMDAu/anBn"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://imgs.search.brave.com/XvCrNbBh-fvwU3HEqJ2l3NtZXMmNkAD7SSb7aY3AtZQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS1waG90by95/b3VuZy1lbGVnYW50/LWJ1c2luZXNzd29t/YW4tcG9zaW5nXzIz/MTIwOC0yMTIuanBn/P3NpemU9NjI2JmV4/dD1qcGc"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <div class="itemCount small text-black-50 my-2">8 items</div>
+          <div class="cards row ms-2">
+            <div class="cardItem p-0 col-6 col-md-3 p-2">
+              <a
+                href="productdetails.html"
+                class="text-decoration-none text-black"
+              >
+                <img
+                  src="https://www.w3schools.com/w3images/jeans3.jpg"
+                  alt=""
+                  class="w-100"
+                />
+                <p class="m-0 p-0">Ripped Skinny Jeans</p>
+                <b class="mt-2 p-0 small">$24.99 </b>
+              </a>
+            </div>
+            <div class="cardItem p-0 col-6 col-md-3 p-2">
+              <img
+                src="https://www.w3schools.com/w3images/jeans1.jpg"
+                alt=""
+                class="w-100"
+              />
+              <p class="m-0 p-0">Ripped Skinny Jeans</p>
+              <b class="mt-2 p-0 small">$24.99 </b>
+            </div>
+            <div class="cardItem p-0 col-6 col-md-3 p-2">
+              <img
+                src="https://www.w3schools.com/w3images/jeans2.jpg"
+                alt=""
+                class="w-100"
+              />
+              <p class="m-0 p-0">Ripped Skinny Jeans</p>
+              <b class="mt-2 p-0 small">$24.99 </b>
+            </div>
+            <div class="cardItem p-0 col-6 col-md-3 p-2">
+              <img
+                src="https://www.w3schools.com/w3images/jeans4.jpg"
+                alt=""
+                class="w-100"
+              />
+              <p class="m-0 p-0">Ripped Skinny Jeans</p>
+              <b class="mt-2 p-0 small">$24.99 </b>
+            </div>
+            <div class="cardItem p-0 col-6 col-md-3 p-2">
+              <img
+                src="https://www.w3schools.com/w3images/jeans4.jpg"
+                alt=""
+                class="w-100"
+              />
+              <p class="m-0 p-0">Ripped Skinny Jeans</p>
+              <b class="mt-2 p-0 small">$24.99 </b>
+            </div>
+            <div class="cardItem p-0 col-6 col-md-3 p-2">
+              <img
+                src="https://www.w3schools.com/w3images/jeans1.jpg"
+                alt=""
+                class="w-100"
+              />
+              <p class="m-0 p-0">Ripped Skinny Jeans</p>
+              <b class="mt-2 p-0 small">$24.99 </b>
+            </div>
+            <div class="cardItem p-0 col-6 col-md-3 p-2">
+              <img
+                src="https://www.w3schools.com/w3images/jeans2.jpg"
+                alt=""
+                class="w-100 opacity-75"
+              />
+              <p class="m-0 p-0">Ripped Skinny Jeans</p>
+              <b class="mt-2 p-0 small">$24.99 </b>
+            </div>
+            <div class="cardItem p-0 col-6 col-md-3 p-2">
+              <img
+                src="https://www.w3schools.com/w3images/jeans1.jpg"
+                alt=""
+                class="w-100"
+              />
+              <p class="m-0 p-0">Ripped Skinny Jeans</p>
+              <b class="mt-2 p-0 small">$24.99 </b>
+            </div>
+          </div>
+          <div class="subscribe bg-black px-2 py-4 w-100">
+            <h1 class="text-light text-capitalize fw-light">subscribe</h1>
+            <p class="text-light fw-lighter small">
+              to get contact with us subscribe here
+            </p>
+            <input
+              type="email"
+              class="form-control rounded-0"
+              placeholder="email"
+            />
+            <button class="btn btn-danger text-capitalize mt-2">
+              subscribe
+            </button>
+          </div>
+          <div class="contactUs bg-body-secondary">
+            <div class="row">
+              <div class="col p-4">
+                <h3 class="small text-center text-capitalize fw-light">
+                  contact
+                </h3>
+                <form action="" class="text-dark text-center text-capitalize">
+                  <p class="small">question?go ahead</p>
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="name"
+                  />
+                  <input
+                    type="email"
+                    class="form-control mb-2"
+                    placeholder="email"
+                  />
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="subject"
+                  />
+                  <input
+                    type="text"
+                    class="form-control mb-2"
+                    placeholder="message"
+                  />
+                  <button
+                    class="text-capitalize w-100 border-0 bg-black text-light small p-1"
+                  >
+                    send
+                  </button>
+                </form>
+              </div>
+              <div class="col p-4">
+                <h3 class="small text-center text-capitalize fw-light">
+                  about
+                </h3>
+                <ul
+                  class="list-unstyled text-capitalize text-center small h-100"
+                >
+                  <li class="mb-2">
+                    <a href="" class="text-black-50">about us</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50">support</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50">we're hiring</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50">find store</a>
+                  </li>
+                  <l class="mb-2" i
+                    ><a href="" class="text-black-50">shipment</a></l
+                  >
+                  <li class="mb-2">
+                    <a href="" class="text-black-50">payment</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50">gift card</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50">help</a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50">support</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col p-4">
+                <h3 class="small text-center text-capitalize fw-light">
+                  store
+                </h3>
+                <ul class="list-unstyled small">
+                  <li class="mb-1">
+                    <a href="" class="text-black-50 text-decoration-none"
+                      ><ion-icon name="location-outline"></ion-icon> Company
+                      Name
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50 text-decoration-none"
+                      ><ion-icon name="call-outline"></ion-icon> 01013631377
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50 text-decoration-none"
+                      ><ion-icon name="book-outline"></ion-icon> ex@mail.com
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50 text-decoration-none"
+                      ><ion-icon name="card-outline"></ion-icon> Credit Card</a
+                    >
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50 text-decoration-none"
+                      ><ion-icon name="image-outline"></ion-icon>Amex
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a href="" class="text-black-50 text-decoration-none"
+                      ><ion-icon name="code-working-outline"></ion-icon
+                      >coding</a
+                    >
+                  </li>
+                  <li class="d-flex gap-2">
+                    <ion-icon name="logo-facebook"></ion-icon
+                    ><ion-icon name="logo-instagram"></ion-icon
+                    ><ion-icon name="logo-twitter"></ion-icon
+                    ><ion-icon name="logo-youtube"></ion-icon>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div
+            class="footer bg-black text-light text-center text-capitalize p-3"
+          >
+            powerd by sayed
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./bootstrap.bundle.js"></script>
+    <script>
+      // document.getElementById("menu").onclick = () => {
+      //   document.getElementById("sidebar").classList.toggle("d-none");
+      //   document.getElementById("sidebar").classList.remove("py-5");
+      //   document.getElementById("sidebar").classList.add("bg-white");
+      // };
+    </script>
+  </body>
+</html>

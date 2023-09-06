@@ -1,0 +1,351 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+}
+.GoToTop {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  z-index: 11;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  padding: 20px 50px;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 111;
+}
+.header .logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+#menu {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}
+@media (max-width: 762px) {
+  .header ul {
+    display: none !important;
+  }
+  #menu {
+    display: block;
+    height: 40px;
+  }
+  .header {
+    height: 75px;
+    padding: 20px 10px;
+  }
+  .header ul.small {
+    padding: 10px;
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 76px;
+    left: 0px;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  ul li {
+    padding: 10px;
+  }
+  ul.small li:hover {
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+  }
+  ul.small li a:hover {
+    background-color: transparent;
+  }
+}
+ul li a {
+  text-decoration: none;
+  color: unset;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 15px;
+  transition: 0.5s;
+}
+ul li a:hover {
+  background-color: black;
+  color: white;
+}
+.landing {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0px 50px;
+  background-image: url("https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.landing::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.3;
+  z-index: 1;
+}
+.landing .content {
+  z-index: 2;
+  color: white;
+}
+.landing .content h3 {
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+.landing .content p {
+  color: #ddd;
+  font-size: small;
+  margin-bottom: 10px;
+}
+.landing .content button {
+  background-color: teal;
+  border: none;
+  padding: 15px 20px;
+  color: white;
+  border-radius: 6px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.content button:hover {
+  background-color: transparent;
+  border: 1px solid teal;
+}
+.gallary .head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 50px 0 50px 0;
+}
+.gallary .head p {
+  margin-bottom: 20px;
+  width: 60%;
+  font-size: 25px;
+  color: #777;
+  font-weight: light;
+}
+.gallary .head .special {
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 5px;
+  color: black;
+}
+.gallary .cards {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.gallary .cards img {
+  max-width: 100%;
+}
+.gallary .meetOurPeople {
+  text-align: center;
+  margin: 80px 0 80px 0;
+  font-size: 33px;
+  font-weight: lighter;
+  opacity: 0.7;
+}
+.gallary .meetPeople {
+  padding: 20px 0px;
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 16px;
+}
+.gallary .meetPeople .card {
+  text-align: center;
+  height: fit-content;
+}
+.gallary .meetPeople .card img {
+  max-width: 100%;
+  height: 200px;
+}
+.gallary .meetPeople .card .name {
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+.gallary .meetPeople .card .pos {
+  font-weight: bold;
+}
+.gallary .dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+.gallary .dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+.gallary .dots .active {
+  background-color: #777;
+}
+.container.contact {
+  background-image: url("./pexels-stephan-seeber-1668246.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container.contact h1 {
+  color: black;
+  font-size: 33px;
+  font-weight: bold;
+}
+.container.contact .contactus {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 15px;
+}
+.container.contact .contactus .nameAndAddress {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.container.contact .contactus input {
+  border: none;
+  outline: none;
+  padding: 2px;
+  height: 40px;
+  border-radius: 7px;
+  width: 100%;
+}
+.container.contact .contactus textarea {
+  width: 100%;
+  height: 88px;
+  resize: none;
+  border-radius: 7px;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+.container.contact .contactus input[type="submit"] {
+  background-color: teal;
+  color: white;
+  border: none;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.container.contact .contactus input[type="submit"]:hover {
+  background-color: transparent;
+
+  border: 1px solid teal;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: #eee;
+}
+.footer ul {
+  list-style: none;
+}
+.footer .left,
+.footer .right {
+  flex-basis: calc(100% / 3);
+}
+@media (max-width: 762px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
+.footer .left h3,
+.footer .center h3,
+.footer .right h3 {
+  font-weight: 400;
+}
+.footer .left p:nth-last-of-type(1) {
+  font-size: smaller;
+  margin-top: 22px;
+  opacity: 0.6;
+}
+.footer .left p:nth-last-of-type(2) {
+  font-size: smaller;
+  margin-top: 20px;
+  opacity: 0.6;
+}
+.footer .center {
+  flex-basis: calc(100% / 3);
+
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer .center ul li {
+  margin-bottom: 10px;
+}
+.footer .center ul li a {
+  padding: 0;
+  font-size: smaller;
+}
+.footer .right p {
+  font-size: smaller;
+  margin-top: 20px;
+  opacity: 0.6;
+}

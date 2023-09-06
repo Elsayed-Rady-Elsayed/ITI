@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        display: inline;
+      }
+      div#style {
+        width: 300px;
+        height: 0px;
+        background-color: red;
+      }
+      table {
+        margin-top: 10px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table,
+      th,
+      tr {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      tr:nth-of-type(even) {
+        background-color: #777 !important;
+      }
+      td {
+        padding: 5px;
+        border: 1px solid black;
+        text-align: center;
+      }
+      #galary {
+        height: 50vh;
+      }
+      #galary #img {
+        height: 100%;
+        width: 100%;
+        background-image: url("https://imgs.search.brave.com/cu9Tj1j9X3ikCtsd7VDLKwbzrduMU4kQnzqpbvLIjtU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9idXJz/dC5zaG9waWZ5Y2Ru/LmNvbS9waG90b3Mv/YS1kcm9wLW9mLXBp/bmstYW5kLXllbGxv/dy1wYWludC1pbi13/YXRlci5qcGc_d2lk/dGg9MTAwMCZmb3Jt/YXQ9cGpwZyZleGlm/PTAmaXB0Yz0w");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        margin: 10px 0;
+      }
+      #galary .btn-group {
+        display: flex;
+        justify-content: space-between;
+      }
+      .btn-group button {
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        background-color: brown;
+      }
+      .download{
+        margin-top: 60px;
+      }
+      .download button{
+      }
+      .download p:first-of-type{
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1">hello angular group</div>
+    <div class="div2">welcome from iti</div>
+    <button class="" onclick="swapEl()">click</button>
+    <hr />
+    <form action="">
+      <input type="number" placeholder="enter the number" name="n1" value="0" />
+      <input type="number" placeholder="enter the number" name="n2" value="0" />
+      <button type="button" onclick="calculator()">calculator</button>
+      <div class="results">
+        <div>
+          number1 + number2 =
+          <p></p>
+        </div>
+        <div>
+          number1 - number2 =
+          <p></p>
+        </div>
+        <div>
+          number1 * number2 =
+          <p></p>
+        </div>
+      </div>
+    </form>
+    <div>
+      <h2>content</h2>
+      <form action="">
+        <input type="text" placeholder="name" id="name" name="name" />
+        <input type="text" placeholder="email" id="email" name="email" />
+        <button type="button" name="btn" id="add-btn">click</button>
+      </form>
+      <table id="table">
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>email</th>
+          <th>delete</th>
+        </tr>
+      </table>
+    </div>
+    <div id="galary" class="galary">
+      <div class="img" id="img"></div>
+      <div class="btn-group">
+        <button id="next">next</button>
+        <button id="prev">prev</button>
+      </div>
+    </div>
+    <div class="download">
+      <button id="download">download</button>
+      <p>download link will appear after 3 secondes</p>
+    </div>
+    <script src="./master.js"></script>
+  </body>
+</html>

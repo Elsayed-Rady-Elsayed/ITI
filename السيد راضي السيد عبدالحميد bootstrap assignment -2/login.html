@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="">
+    <div
+      class="row d-flex p-0 m-0 align-items-center justify-content-center"
+      style="width: 100vw; height: 100vh"
+    >
+      <form action="" class="border border-1 p-2 rounded-3 col-11 col-lg-4">
+        <h2>LOGIN,</h2>
+        <label for="" class="form-label text-capitalize">EMAIL</label>
+        <input
+          type="email"
+          placeholder="email"
+          name="email"
+          class="form-control"
+          required
+        />
+        <label for="" class="form-label text-capitalize mt-3">password</label>
+        <input
+          type="password"
+          placeholder="password"
+          name="pass"
+          class="form-control"
+          required
+        />
+        <button
+          id="btn"
+          type="button"
+          class="btn btn-info mt-3 text-light w-100"
+        >
+          LOGIN
+        </button>
+      </form>
+    </div>
+    <script>
+      document.getElementById("btn").onclick = () => {
+        location.href = "./index.html";
+      };
+    </script>
+  </body>
+</html>

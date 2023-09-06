@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .body {
+        width: 200px;
+        height: 500px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+      }
+      .red,
+      .green,
+      .yello {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: rgb(49, 49, 25);
+      }
+      .yello {
+        background-color: rgb(49, 49, 25);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <div class="red" style="background-color: red" id="red"></div>
+      <div
+        class="yello"
+        style="background-color: rgb(49, 49, 25)"
+        id="yellw"
+      ></div>
+      <div
+        class="green"
+        style="background-color: rgb(49, 49, 25)"
+        id="green"
+      ></div>
+    </div>
+    <script src="traf.js"></script>
+  </body>
+</html>

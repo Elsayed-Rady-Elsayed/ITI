@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+  </head>
+  <body class="">
+    <div
+      class="p-0 m-0 d-flex align-items-center justify-content-center row"
+      style="height: 100vh; width: 100%"
+    >
+      <form action="" class="border border-1 p-3 rounded-3 col-11 col-lg-4">
+        <h2
+          class="fw-bold text-center text-uppercase"
+          style="
+            background-image: linear-gradient(to right, blue, red);
+            background-repeat: repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 60px;
+          "
+        >
+          register
+        </h2>
+        <label for="" class="form-label text-capitalize">full name:</label>
+        <input id="name" type="text" placeholder="name" class="form-control" />
+        <label for="" class="form-label text-capitalize mt-2"
+          >your email:</label
+        >
+        <input
+          id="email"
+          type="email"
+          placeholder="email"
+          class="form-control"
+        />
+        <label for="" class="form-label text-capitalize mt-2">password:</label>
+        <input
+          id="pass"
+          type="password"
+          placeholder="password"
+          class="form-control"
+        />
+        <label for="" class="form-label text-capitalize mt-2"
+          >confirm password:</label
+        >
+        <input
+          id="confpass"
+          type="password"
+          placeholder="confirm password"
+          class="form-control mb-3"
+        />
+        <div class="form-check">
+          <input type="checkbox" value="accept" class="form-check-input" />
+          <label for="" class="form-check-label"
+            >accept all terms <a href="">read terms again</a></label
+          >
+        </div>
+        <button
+          id="register-btn"
+          class="btn btn-primary text-capitalize mt-3 px-5"
+          type="button"
+        >
+          register
+        </button>
+      </form>
+      <div
+        class="alert alert-danger position-fixed bottom-0 d-none"
+        id="invaliddata"
+        role="alert"
+      >
+        please enter valid data!
+      </div>
+    </div>
+    <script src="./bootstrap.bundle.js"></script>
+    <script>
+      let username = document.getElementById("name");
+      let email = document.getElementById("email");
+      let pass = document.getElementById("pass");
+      let confpass = document.getElementById("confpass");
+      let btn = document.getElementById("register-btn");
+      let preventReg = true;
+      function validation(evt, el) {
+        let val = evt.target.value;
+        if (val == "" || val.length < 4) {
+          preventReg = false;
+          el.classList.add("is-invalid");
+        } else {
+          preventReg = true;
+          el.classList.add("is-valid");
+          el.classList.remove("is-invalid");
+        }
+      }
+      username.addEventListener("input", (evt) => {
+        validation(evt, evt.target);
+      });
+      email.addEventListener("input", (evt) => {
+        validation(evt, evt.target);
+      });
+      pass.addEventListener("input", (evt) => {
+        validation(evt, evt.target);
+      });
+      confpass.addEventListener("input", (evt) => {
+        validation(evt, evt.target);
+        if (evt.target.value != pass.value) {
+          evt.target.classList.add("is-invalid");
+          evt.target.classList.remove("is-valid");
+        } else {
+          confpass.classList.remove("is-invalid");
+          confpass.classList.add("is-valid");
+        }
+      });
+      btn.onclick = () => {
+        if (preventReg == false || pass.value != confpass.value) {
+          console.log("no");
+          document.getElementById("invaliddata").classList.remove("d-none");
+          confpass.classList.add("is-invalid");
+        } else {
+          confpass.classList.remove("is-invalid");
+          document.getElementById("invaliddata").classList.add("d-none");
+          window.location.href = "./index.html";
+        }
+      };
+    </script>
+  </body>
+</html>
